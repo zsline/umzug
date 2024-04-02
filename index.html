@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -52,6 +52,7 @@
                 </button>
                 <a href="tel:+01637166657">0163 716 66 57</a>
             </div> 
+            <div class="mobil-menu"></div>
         </div>
         </div>
     </header>
@@ -59,7 +60,7 @@
     <section class="main-offer">
         <div class="container">
             <div class="row">
-                <div class="col-md-9 main-offer__info">
+                <div class="col-9 main-offer__info">
                     <h1>Günstige Umzüge in München und Umgebung</h1>
                     <div class="main-offer__inner">
                         <div class="main-offer__price">
@@ -401,13 +402,13 @@
         </div>
         <div class="fair__info">
             <div class="container">
-                <div class="fair__info--item d-flex align-items-center justify-content-between">
-                    <p>Ob Privatumzug oder gewerblicher Umzug, jeder Ortswechsel erfordert eine sorgfältige Planung, Organisation und fachgerechte Abwicklung. Die Umzugsexperten von Umzug Stern aus München übernehmen für Sie das Beladen und Entladen aller Umzugsgüter und sind Ihnen auf Wunsch auch gerne bei Montagearbeiten behilflich.</p>
-                    <img src="assets/img/fair-1.jpg" alt="">
+                <div class="fair__info--item row d-flex align-items-center justify-content-between">
+                    <p class="col-md-6">Ob Privatumzug oder gewerblicher Umzug, jeder Ortswechsel erfordert eine sorgfältige Planung, Organisation und fachgerechte Abwicklung. Die Umzugsexperten von Umzug Stern aus München übernehmen für Sie das Beladen und Entladen aller Umzugsgüter und sind Ihnen auf Wunsch auch gerne bei Montagearbeiten behilflich.</p>
+                    <img class="col-md-6" src="assets/img/fair-1.jpg" alt="">
                 </div>
-                <div class="fair__info--item d-flex align-items-center justify-content-between">
-                    <p>Gerade der Möbelabbau und aufbau kosten beim Umzug oftmals die letzten Nerven. Das muss nicht sein! Wenn Sie uns mit Ihrem Privatumzug beauftragen, können Sie sich ganz entspannt zurücklehnen.<br><br><span>Wir sind Ihr kompetenter Ansprechpartner für einen besonders zeitnahen, Ihre Nerven und den Geldbeutel schonenden Privatumzug in München und Umgebung!</span></p>
-                    <img src="assets/img/fair-2.jpg" alt="">
+                <div class="fair__info--item row d-flex align-items-center justify-content-between">
+                    <p class="col-md-6">Gerade der Möbelabbau und aufbau kosten beim Umzug oftmals die letzten Nerven. Das muss nicht sein! Wenn Sie uns mit Ihrem Privatumzug beauftragen, können Sie sich ganz entspannt zurücklehnen.<br><br><span>Wir sind Ihr kompetenter Ansprechpartner für einen besonders zeitnahen, Ihre Nerven und den Geldbeutel schonenden Privatumzug in München und Umgebung!</span></p>
+                    <img class="col-md-6" src="assets/img/fair-2.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -457,7 +458,7 @@
             <h4 class="firme__subtitle">
                 Umzug Stern hat sich auf Unternehmensumzüge spezialisiert. Ob Neugründung, Standortverlagerung oder Zusammenführung, unser Team wickelt Ihren Firmenumzug schnell und unkompliziert ab.
             </h4>
-            <div class="firme__wrapper d-flex justify-content-between align-items-start">
+            <div class="firme__wrapper d-flex justify-content-between">
                 <div class="firme__wrapper--info">
                     <p>Wir setzen alles daran, dass Ihre Mitarbeiter während der Umzugsphase ungestört weiterarbeiten können und Sie so wenig finanzielle Einbußen wie möglich haben. Auch europaweit sorgen wir für einen perfekten Ablauf, da wir über ein ausgedehntes Logistiknetzwerk verfügen.</p>
                     <p>Nutzen Sie unser praktisches Anfrageformular. Wir beantworten Ihre Anfrage zeitnah und machen Ihnen ein individuelles und kostengünstiges Angebot. Damit auch Sie Ihre Deadlines einhalten können, garantieren wir eine termingerechte Abwicklung – wir freuen uns, Sie bei Ihrem Firmenumzug unterstützen zu dürfen!</p>
@@ -474,7 +475,7 @@
     <section class="lies">
         <div class="container">
             <h2>Leistungen</h2>
-            <div class="lies__wrapper d-flex align-items-start justify-content-between">
+            <div class="lies__wrapper d-flex justify-content-between">
                 <div class="lies__img">
                     <img src="assets/img/lies.jpg" alt="">
                 </div>
@@ -650,6 +651,14 @@
                 nextEl: '.reviews__swiper--next',
                 prevEl: '.reviews__swiper--prev',
             }, 
+            breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    820: {
+                        slidesPerView: 2,
+                    }
+                }
                 });
         </script>
     </section>
@@ -843,6 +852,6 @@
             </div>
         </div>
     </footer>
-
+<script src="assets/js/main.js"></script>
 </body>
 </html>
