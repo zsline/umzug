@@ -1072,6 +1072,31 @@ z-index: 999999;
     color: var(--main-blue);
 }
 
+
+
+/*====================    ====================*/
+
+.page-offer__info{
+    width: 60%;
+    padding: 170px 0;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0.9472163865546218) 76%, rgba(255,255,255,0) 100%);
+}
+.page-offer__info p{
+    max-width: 407px;
+    margin-top: 14px;
+
+}
+.page-offer__info .main-offer__btns{
+    margin: 26px 0 12px;
+}
+
+.privatumzug-offer{
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+
+
 @media (hover: hover){
     .btn-tel:hover{
         background-color: var(--img-blue);
@@ -1112,13 +1137,6 @@ z-index: 999999;
     .faq-link:active{
         color: var(--main-blue);
     }
-    /* .menu-item-has-children:active .sub-menu{
-        display: flex;
-        opacity: 1;
-        transform: translateY(0px);
-        pointer-events: painted;
-        transition: all 0.3s;
-    }  */
 }
 
 /*===================== MEDIA ======================*/
