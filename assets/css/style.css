@@ -5,15 +5,19 @@
     --img-blue: #739BFF;
     --black: #454545;
 }
+*{
+    /* outline: 1px solid #000; */
+}
 .body{
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    width: 100vw;
 }
 p{
     display: block;
     font-family: "Poppins", sans-serif;
     font-size: clamp(15px, 1.7vw, 20px);
-    margin-bottom: clamp(15px, 2.2vw, 24px);;
+    margin-bottom: clamp(15px, 2.2vw, 24px);
 }
 a{
     opacity: 0.95;
@@ -297,6 +301,14 @@ z-index: 999999;
     color: #fff;
     padding: 56px 0;
 }
+.stress .btn-fill {
+    background-color: var(--main-yellow);
+    color: var(--main-blue);
+    margin-top: 24px;
+}
+.stress .btn-fill:hover{
+    color: #fff;
+}
 .stress__wrapper{
     position: relative;
     width: 100%;
@@ -338,7 +350,7 @@ z-index: 999999;
 }
 .fur__item{
     border-radius: 25px;
-    width: 400px;
+    width: 385px;
     height: 409px;
     overflow: hidden;
     display: flex;
@@ -371,6 +383,9 @@ z-index: 999999;
     background-color: var(--main-yellow);
     color: var(--black);
     padding: 56px 0;
+}
+.private .btn-fill{
+    margin-top: 24px;
 }
 .private__wrapper{
     position: relative;
@@ -517,7 +532,7 @@ z-index: 999999;
     cursor: pointer;
 }
 .full-services__check ~ .full-services__btn::after{
-    content: 'Show more';
+    content: 'Mehr anzeigen';
 }
 .full-services__check:checked ~ .full-services__btn::after{
     content: 'Weniger';
@@ -539,6 +554,7 @@ z-index: 999999;
 .fair{
     text-align: center;
 }
+
 .fair h2{
     margin-bottom: 24px;
 }
@@ -691,7 +707,7 @@ z-index: 999999;
     cursor: pointer;
 }
 .umz__check ~ .umz__btn::after{
-    content: 'Show more';
+    content: 'Mehr anzeigen';
 }
 .umz__check:checked ~ .umz__btn::after{
     content: 'Weniger';
@@ -897,7 +913,7 @@ z-index: 999999;
     display: block;
     position: relative;
     font-family: "Poppins";
-    font-size: 20px;
+    font-size: clamp(15px, 1.7vw, 20px);
     font-weight: 600;
     color: var(--main-blue);
     padding: 16px 80px 16px 48px;
@@ -913,7 +929,7 @@ z-index: 999999;
     height: 24px;
 }
 .faq__text{
-    font-size: 20px;
+    font-size: clamp(15px, 1.7vw, 20px);
     padding: 0px 48px 16px;
     display: none;
 }
@@ -938,6 +954,7 @@ z-index: 999999;
 .contact__sitys{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: clamp(24px, 4vw, 48px);
     width: 50%;
 }
 .contact__sitys--item {
@@ -948,6 +965,11 @@ z-index: 999999;
     border-top-left-radius: 45px;
     border-bottom-right-radius: 45px;
     overflow: hidden;
+    min-height: 250px;
+}
+.contact__map iframe{
+    display: block;
+    height: 100%;
 }
 
 .footer{
@@ -980,7 +1002,7 @@ z-index: 999999;
 .header__nav.is_open{
     position: absolute;
     display: block;
-    right: -90px;
+    right: -63px;
     top: 100%;
     background-color: var(--main-yellow);
     padding: 20px 96px;
@@ -1039,7 +1061,16 @@ z-index: 999999;
 }
 
 /*==============================================*/
-
+.menu-item-has-children:hover .sub-menu{
+    display: flex;
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: painted;
+    transition: all 0.3s;
+} 
+.menu-item > a:hover{
+    color: var(--main-blue);
+}
 
 @media (hover: hover){
     .btn-tel:hover{
@@ -1060,16 +1091,7 @@ z-index: 999999;
     .faq-link:hover{
         color: var(--main-blue);
     }
-    .menu-item-has-children:hover .sub-menu{
-        display: flex;
-        opacity: 1;
-        transform: translateY(0px);
-        pointer-events: painted;
-        transition: all 0.3s;
-    } 
-    .menu-item > a:hover{
-        color: var(--main-blue);
-    }
+
 }
 @media (hover: none){
     .btn-tel:active{
@@ -1090,13 +1112,13 @@ z-index: 999999;
     .faq-link:active{
         color: var(--main-blue);
     }
-    .menu-item-has-children:active .sub-menu{
+    /* .menu-item-has-children:active .sub-menu{
         display: flex;
         opacity: 1;
         transform: translateY(0px);
         pointer-events: painted;
         transition: all 0.3s;
-    } 
+    }  */
 }
 
 /*===================== MEDIA ======================*/
@@ -1143,5 +1165,198 @@ z-index: 999999;
         transform: translate(0);
         justify-content: center;
         gap: 80px;
+    }
+    .contact__sitys{
+        display: block;
+        width: 35%;
+    }
+    .contact__sitys--item{
+        margin-bottom: 24px;
+    }
+}
+@media (max-width:768px){
+    .main-offer__inner{
+        display: block;
+    }
+    .main-offer__info{
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0.9472163865546218) 56%, rgba(255, 255, 255, 0) 100%);
+    }
+    .firme__wrapper{
+        flex-direction: column-reverse;
+    }
+    .firme__wrapper--img,
+    .lies__img{
+        max-width: 100%;
+    }
+    .lies__wrapper{
+        flex-direction: column;
+    }
+    .spedition__wrapper{
+        padding: 100px 32px;
+    }
+    .stress h2,
+    .private h2{
+        text-wrap: balance;
+    }
+    .ben__item--img{
+        margin-bottom: 24px;
+    }
+    .ben__item--info{
+        padding: 0;
+        text-align: center;
+        text-wrap: balance;
+    }
+    .ben__item:nth-child(2n) .ben__item--info{
+        padding: 0;
+    }
+    .zus__wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .zus__item--text,
+    .fair__item h4{
+        text-wrap: balance;
+    }
+    .unser__wrapper{
+        flex-direction: column;
+    }
+    .unser__item{
+        max-width: 100%;
+        height: 100px;
+    }
+    .unser__item.is_open{
+        max-width: 100%;
+        height: auto;
+    }
+    .wie__wrapper{
+        flex-direction: column-reverse;
+    }
+    .wie__img{
+        width: 100%;
+        max-width: 100%;
+    }
+    .wie__img img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+    .fair__wrapper{
+        display: block;
+    }
+    .fair__item{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    .fair__item h4{
+        text-align: center;
+    }
+    .footer__body{
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer__logo{
+        order: 3;
+    }
+}
+@media (max-width:576px) {
+    .main-offer__price{
+        width: 100%;
+        overflow: hidden;
+        margin-right: 0;
+        max-width: 100vw;
+    }
+    .eapps-widget{
+        width: 300px !important;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .header__link{
+        flex-direction: column;
+        gap: 4px;
+    }
+    .spedition{
+        padding: 80px 8px;
+    }
+    .spedition__wrapper{
+        padding: 48px 12px;
+    }
+    .zus__wrapper{
+        display: block;
+    }
+    .zus__item{
+        margin-bottom: 24px;
+        text-wrap: balance;
+    }
+    .contact__wrapper{
+        flex-direction: column;
+    }
+    .contact__sitys{
+        display: grid;
+        gap: 30px;
+    }
+    .contact__map iframe{
+        height: 250px;
+    }
+    .contact__sitys--item{
+        gap: clamp(12px, 8vw, 48px);
+    }
+    .faq__title{
+        padding: 16px 60px 16px 16px;
+    }
+    .faq__title::after{
+        right: 16px;
+    }
+    .faq__text{
+        padding: 0px 16px 16px;
+    }
+    .footer__bottom--wrapper{
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+}
+@media (max-width:440px){
+    .main-offer__info{
+        padding: 36px 10px;
+    }
+    .ben, .fur, .wie, .umz, .faq{
+        padding: 48px 0;
+    }
+    .wie {
+        padding-top: 24px;
+    }
+    .firme, .lies, .contact{
+        padding-bottom: 48px;
+    }
+    .ben__item{
+        margin-top: 16px;
+    }
+    .ben__item:nth-child(1){
+        margin-top: 48px;
+    }
+    .fur__wrapper{
+        row-gap: 16px;
+    }
+    .reviews__slide--top{
+        flex-direction: column;
+    }
+    .reviews__slide--avatar{
+        margin-bottom: 8px;
+    }
+    .contact__sitys{
+        display: block;
+        width: 100%;
+    }
+    .contact__sitys--item{
+        justify-content: space-between;
+        width: 240px;
+        margin: 0 auto 24px;
+    }
+    .contact__sitys--item h4{
+        text-align: left;
+    }
+    .footer__time{
+        text-wrap: balance;
     }
 }
