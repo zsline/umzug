@@ -59,7 +59,7 @@
     <section class="privatumzug-offer page-offer" style="background-image: url(assets/img/privatumzug.jpg)">
         <div class="container">
             <div class="page-offer__info">
-                <h1>Privatumzug München</h1>
+                <h1>Kartonrechner</h1>
                 <div class="main-offer__btns">
                 <button class="btn-fill">
                     UMZUGSANFRAGE
@@ -72,6 +72,45 @@
             </div>
         </div>
     </section>
+    <div class="umzugform">
+            <div class="container">
+        <form class="umzugform__form" name="UmzugForm" action="" id="UmzugForm">
+        <div class="umzugform__item">
+            <div class="umzugform__label">Anzahl Personen im Haushalt</div>
+            <input class="text" maxlength="2" name="position158" size="2">
+        </div>
+        <div class="umzugform__item">
+            <div class="umzugform__label">Wohndauer in Jahren</div>
+            <input class="text" maxlength="2" name="position159" size="2">
+        </div>
+        <div class="umzugform__item">
+            <div class="umzugform__label">Anzahl Zimmer</div>
+            <input class="text" maxlength="2" name="position160" size="2">
+        </div>
+        <div class="umzugform__item">
+            <div class="umzugform__label">Bucher, lfm</div>
+            <input class="text" maxlength="2" name="position161" size="2">
+        </div>
+        <div class="umzugform__btns">
+            <input class="btn-fill" type="button" value="Berechnen" onclick="UmzugBerechnug()">
+            <input class="btn-str" type="reset" value="Verwerfen">
+        </div>
+        <div class="umzugform__item umzugform__result">
+            <div class="umzugform__label">Ergebnis, ca.:</div>
+            <input type="text" maxlength="10" name="KartonErgebnisfeld" disabled="">
+        </div>
+</form>
+    </div>
+    </div>
+
+    
+<script lang="javascript">
+    function
+    UmzugBerechnug() {
+        var KartonWert = 19 + 3.5 * (document.UmzugForm.position158.value -1)+0.5 * (document.UmzugForm.position159.value - 1) * document.UmzugForm.position158.value + 15 * (document.UmzugForm.position160.value -1) + 1.5 * document.UmzugForm.position161.value;
+        document.UmzugForm.KartonErgebnisfeld.value = Math.round(KartonWert);
+    }
+</script>
     </main>
     <footer class="footer">
         <div class="container">

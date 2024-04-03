@@ -33,6 +33,20 @@ button{
     background-color: transparent;
     border-radius: 5px;
 }
+input[type="button"],
+input[type="reset"]{
+    text-transform: uppercase;
+    border: none;
+}
+.text,
+input[type="text"]{
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    width: 80px;
+}
 h1{
     font-family: "Poppins", sans-serif;
     font-size: clamp(36px, 5vw, 54px);
@@ -100,9 +114,10 @@ img{
     font-size: 18px;
     font-weight: 500;
     transition: all 0.3s;
+    border-radius: 5px;
 }
 .btn-str{
-    border: 1px solid var(--main-blue);
+    border: 1px solid var(--main-blue) !important;
     padding: 5px 15px;
     font-family: "Poppins";
     font-size: 18px;
@@ -1097,6 +1112,37 @@ z-index: 999999;
 }
 
 
+.umzugform{
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    padding: 96px 0;
+}
+.umzugform__form{
+    display: block;
+    background-color: #fff;
+    padding: 48px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25);
+}
+.umzugform__item, .umzugform__btns{
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 8px auto;
+}
+.umzugform__btns{
+    justify-content: end;
+    gap: 8px;
+}
+.umzugform__label{
+    font-size: 20px;
+    font-weight: 600;
+}
 @media (hover: hover){
     .btn-tel:hover{
         background-color: var(--img-blue);
