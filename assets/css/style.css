@@ -5,9 +5,7 @@
     --img-blue: #739BFF;
     --black: #454545;
 }
-*{
-    /* outline: 1px solid #000; */
-}
+
 .body{
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
@@ -1105,12 +1103,48 @@ z-index: 999999;
     margin: 26px 0 12px;
 }
 
-.privatumzug-offer{
+.page-offer{
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 100%;
 }
-
+.page-content{
+    margin-top: 48px;
+}
+.page-content h2{
+    text-align: center;
+    margin: 96px 0 36px;
+}
+.page-content__text{
+    font-size: 20px;
+    text-align: center;
+    text-indent: 0;
+    margin-bottom: 28px;
+    text-wrap: balance;
+}
+.page-content p{
+    text-align: left;
+    text-indent: 2em;
+}
+.page-content h4{
+    text-align: center;
+    margin-bottom: 48px;
+}
+.page-item p{
+    text-align: left;
+}
+.page-item{
+    text-indent: 2em;
+    margin-bottom: 30px;
+}
+.page-item:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.page-item img{
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    max-height: 328px;
+}
 
 .umzugform{
     background-color: #f5f5f5;
@@ -1142,6 +1176,59 @@ z-index: 999999;
 .umzugform__label{
     font-size: 20px;
     font-weight: 600;
+}
+
+.firmenumzug h4{
+    margin-bottom: 24px;
+}
+.firmenumzug .blue{
+    color: var(--main-blue);
+    margin-bottom: 48px;
+}
+.page-btn {
+    display: block;
+    width: max-content;
+    margin: 40px auto 78px;
+}
+.page-marker li{
+    position: relative;
+    padding-left: 90px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.page-marker li::before{
+    position: absolute;
+    content: '';
+    width: 45px;
+    height: 25px;
+    background-image: url(../img/decor-right-blue.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.page-big-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 32px;
+}
+.page-big-item__content{
+    text-align: left;
+    width: 50%;
+}
+.page-big-item__img{
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    overflow: hidden;
+}
+.page-big-item__img img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 @media (hover: hover){
     .btn-tel:hover{
